@@ -27,6 +27,7 @@ import linkedin from "../../public/linkedin.svg";
 import whatsapp from "../../public/whatsapp.png";
 
 import { Button } from "@/components/ui/button";
+import { useTranslations } from "next-intl";
 const icons = [
   html,
   css,
@@ -72,6 +73,7 @@ const socialMedia = [
   },
 ];
 export function SectionTwo() {
+  const t = useTranslations("Index");
   return (
     <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 mt-10">
       <div className="w-full relative col-span-1">
@@ -84,8 +86,8 @@ export function SectionTwo() {
       <div className="flex flex-col w-full col-span-1 lg:col-span-2 gap-4">
         <Card className="bg-gray-100 border-none ">
           <CardHeader>
-            <CardTitle>Explore my stack</CardTitle>
-            <CardDescription>Check out the tools i use daily </CardDescription>
+            <CardTitle>{t("stack")}</CardTitle>
+            <CardDescription>{t("stackdesc")}</CardDescription>
           </CardHeader>
           <CardContent className="flex flex-wrap gap-4">
             {icons.map((item, index) => (
@@ -103,7 +105,7 @@ export function SectionTwo() {
               <h1 className="text-2xl font-medium pt-3">{item.name}</h1>
               <p className="text-muted-foreground">{item.username}</p>
               <Button className="mt-4" size="sm" asChild>
-                <a href={item.link}>Contact</a>
+                <a href={item.link}>{t("Contact")}</a>
               </Button>
             </Card>
           ))}

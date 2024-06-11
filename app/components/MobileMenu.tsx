@@ -8,15 +8,17 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
-import { navigationItems } from "./Navbar";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
+import { useTranslations } from "next-intl";
 
 export function MobileMenu() {
   const location = usePathname();
   const [open, setOpen] = useState(false);
+  const t = useTranslations("Index");
+
   useEffect(() => {
     setOpen(false);
   }, [location]);
@@ -29,20 +31,28 @@ export function MobileMenu() {
       </SheetTrigger>
       <SheetContent>
         <div className="mt-5 flex px-2 space-y-1 flex-col">
-          {navigationItems.map((item, index) => (
-            <Link
-              href={item.href}
-              key={index}
-              className={cn(
-                location === item.href
-                  ? "bg-muted"
-                  : "hover:bg-muted hover:bg-opacity-75",
-                "group flex items-center px-2 py-2 text-md font-semibold rounded-md"
-              )}
-            >
-              {item.name}
-            </Link>
-          ))}
+          <Link
+            href="/"
+            className={cn(
+              location === "/"
+                ? "bg-muted"
+                : "hover:bg-muted hover:bg-opacity-75",
+              "group flex items-center px-2 py-2 text-md font-semibold rounded-md"
+            )}
+          >
+            {t("nav1")}
+          </Link>
+          <Link
+            href="/projects"
+            className={cn(
+              location === "/projects"
+                ? "bg-muted"
+                : "hover:bg-muted hover:bg-opacity-75",
+              "group flex items-center px-2 py-2 text-md font-semibold rounded-md"
+            )}
+          >
+            {t("nav2")}
+          </Link>
         </div>
         <SheetFooter className="mt-5">
           <SheetClose asChild>

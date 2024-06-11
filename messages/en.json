@@ -1,0 +1,29 @@
+{
+  "Index": {
+    "logo": "Yousef",
+    "logo2": "Saeed",
+    "nav1": "Home",
+    "nav2": "Projects",
+    "nav3": "Contact Me",
+    "title": "Hey I am Yousef Saeed 🚀",
+    "title2": "I am a Front-End Developer 🌐 From Egypt ",
+    "button": "Get in Touch!",
+    "button2": "Download CV",
+    "stack": "Explore my stack",
+    "stackdesc": "Check out the tools i use daily",
+    "Contact": "Contact",
+    "title3": "Passionate versitile Front-End Developer who loves to create",
+    "description": "I am a front-end developer with a passion for creating intuitive and visually appealing web applications. I have experience in building responsive and interactive user interfaces using modern technologies and frameworks. I am dedicated to crafting innovative and user-centric solutions that enhance user experience and address real-world challenges.",
+    "header": "Latest Projects",
+    "projectsButton": "View All Projects",
+    "dialogHeader": "Project Details",
+    "dialogVideo": "Project Preview Video",
+    "dialogDescription": "Project Description",
+    "dialogTech": "Technologies Used",
+    "viewProject": "View Project"
+  },
+  "Projects": {
+    "header": "Projects",
+    "description": "Here are some of the projects I have worked on. Click on a project to view more details."
+  }
+}
