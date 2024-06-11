@@ -4,5 +4,7 @@ export interface ProjectsCard {
   imageUrl: string;
   tags: string[];
   description: string;
-  link: string;
+  github: string;
+  preveiw: string;
+  videoLink: string;
 }

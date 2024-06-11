@@ -21,8 +21,18 @@ export const projectsType = defineType({
       type: 'text',
     }),
     defineField({
-      name: 'link',
-      title: 'Link',
+      name: 'github',
+      title: 'Github Url',
+      type: 'url',
+    }),
+    defineField({
+      name: 'preveiw',
+      title: 'Preveiw Url',
+      type: 'url',
+    }),
+    defineField({
+      name: 'videoLink',
+      title: 'Video Url',
       type: 'url',
     }),
     defineField({
