@@ -93,7 +93,7 @@ export function SectionTwo() {
             ))}
           </CardContent>
         </Card>
-        <div className="grid grid-cols-1 sm:grid-cols-4 w-full gap-4">
+        <div className="grid grid-cols-2 md:grid-cols-4 w-full gap-4">
           {socialMedia.map((item) => (
             <Card
               key={item.id}

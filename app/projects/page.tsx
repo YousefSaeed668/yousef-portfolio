@@ -82,6 +82,7 @@ export default async function ProjectsPage() {
                       <iframe
                         src={item.videoLink}
                         title="YouTube video player"
+                        allowFullScreen
                         className="w-full h-[300px] "
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                       ></iframe>

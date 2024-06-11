@@ -82,6 +82,7 @@ export async function FavoriteProjects() {
                       src={item.videoLink}
                       title="YouTube video player"
                       className="w-full h-[300px] "
+                      allowFullScreen
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     ></iframe>
                   </div>
