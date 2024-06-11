@@ -30,6 +30,9 @@ export function Navbar() {
     const currentPath = window.location.pathname;
     const newPath = currentPath.replace(/\/(en|ar)/, `/${locale}`);
     router.replace(newPath);
+    setTimeout(() => {
+      window.location.reload();
+    }, 300);
   };
 
   return (

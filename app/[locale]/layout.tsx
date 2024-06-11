@@ -4,7 +4,7 @@ import { Navbar } from "../components/Navbar";
 import { Readex_Pro } from "next/font/google";
 import { Footer } from "../components/Footer";
 
-const cairo = Readex_Pro({ subsets: ["latin"] });
+const readexpro = Readex_Pro({ subsets: ["latin"] });
 export default async function LocaleLayout({
   children,
   params: { locale },
@@ -16,7 +16,7 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale} dir={locale === "ar" ? "rtl" : "ltr"}>
-      <body className={cairo.className}>
+      <body className={readexpro.className}>
         <NextIntlClientProvider messages={messages}>
           <Navbar />
           {children}
