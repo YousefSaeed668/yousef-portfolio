@@ -9,7 +9,6 @@ import {
 } from "@/components/ui/dialog";
 import { ProjectsCard } from "@/lib/interface";
 
-
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { ProjectsButton } from "./ProjectsButton";
@@ -33,7 +32,7 @@ export function ProjectDialog({ item }: { item: ProjectsCard }) {
             <h2 className="font-medium text-lg hover:underline">
               {item.title}
             </h2>
-            <p className="mt-1 text-muted-foreground line-clamp-3">
+            <p className="mt-1 text-muted-foreground line-clamp-3 text-justify">
               {item.description}
             </p>
             <div className="mt-3 flex flex-wrap gap-2">
@@ -72,7 +71,7 @@ export function ProjectDialog({ item }: { item: ProjectsCard }) {
               <h3 className="text-black text-lg w-fit mb-4 font-semibold">
                 {t("dialogDescription")}
               </h3>
-              {item.description}
+              <p className="text-justify">{item.description}</p>
             </div>
             <div>
               <h3 className="text-black text-lg my-4 w-fit font-semibold">
