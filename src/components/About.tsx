@@ -1,4 +1,4 @@
-import { Card } from "@/components/ui/card";
+import { Card } from "@/src/components/ui/card";
 import me from "../../public/me.png";
 import Image from "next/image";
 import { useTranslations } from "next-intl";

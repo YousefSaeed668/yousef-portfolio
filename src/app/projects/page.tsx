@@ -1,9 +1,9 @@
-import { ProjectDialog } from "@/app/components/ProjectDialog";
-import { ProjectsButton } from "@/app/components/ProjectsButton";
-import { ProjectsHeader } from "@/app/components/ProjectsHeader";
-
 import { ProjectsCard } from "@/lib/interface";
 import { client } from "@/lib/sanity";
+import { ProjectDialog } from "@/src/components/ProjectDialog";
+import { ProjectsButton } from "@/src/components/ProjectsButton";
+import { ProjectsHeader } from "@/src/components/ProjectsHeader";
+import { getLocale } from "next-intl/server";
 
 async function getData(locale: string) {
   const type = locale === "ar" ? "projectar" : "project";
@@ -22,11 +22,8 @@ async function getData(locale: string) {
   return data;
 }
 
-export default async function ProjectsPage({
-  params: { locale },
-}: {
-  params: { locale: string };
-}) {
+export default async function ProjectsPage() {
+  const locale = await getLocale();
   const data: ProjectsCard[] = await getData(locale);
 
   return (

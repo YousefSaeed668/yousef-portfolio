@@ -1,8 +1,8 @@
 import { AboutSection } from "../components/About";
 import { FavoriteProjects } from "../components/FavoriteProjects";
-import { Footer } from "../components/Footer";
 import { Hero } from "../components/Hero";
 import { SectionTwo } from "../components/SectionTwo";
+
 interface HomeProps {
   params: { locale: string };
 }

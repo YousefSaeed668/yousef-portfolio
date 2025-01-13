@@ -1,39 +1,23 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
+import { Button } from "@/src/components/ui/button";
 import {
   NavigationMenu,
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
   navigationMenuTriggerStyle,
-} from "@/components/ui/navigation-menu";
-import Link from "next/link";
-import { usePathname, useRouter } from "next/navigation";
-import { MobileMenu } from "./MobileMenu";
+} from "@/src/components/ui/navigation-menu";
 import { useTranslations } from "next-intl";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
-import { Languages } from "lucide-react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import LocaleSwitcher from "./LocaleSwitcher";
+import { MobileMenu } from "./MobileMenu";
 
 export function Navbar() {
   const pathname = usePathname();
   const isHome = pathname.split("/")[2] === undefined;
-  console.log(isHome);
-  const router = useRouter();
   const t = useTranslations("Index");
-  const changeLocale = (locale: string) => {
-    const currentPath = window.location.pathname;
-    const newPath = currentPath.replace(/\/(en|ar)/, `/${locale}`);
-    router.replace(newPath);
-    setTimeout(() => {
-      window.location.reload();
-    }, 700);
-  };
 
   return (
     <nav className="max-w-7xl mx-auto px-4 md:px-8 py-5 grid grid-cols-12">
@@ -78,27 +62,7 @@ export function Navbar() {
         <div className="sm:hidden ">
           <MobileMenu />
         </div>
-        <DropdownMenu>
-          <DropdownMenuTrigger asChild>
-            <Button variant="outline" size="icon" className="px-1 py-1">
-              <Languages className="h-4 w-4" />
-            </Button>
-          </DropdownMenuTrigger>
-          <DropdownMenuContent className="w-4">
-            <DropdownMenuItem
-              className="cursor-pointer"
-              onClick={() => changeLocale("en")}
-            >
-              EN
-            </DropdownMenuItem>
-            <DropdownMenuItem
-              className="cursor-pointer"
-              onClick={() => changeLocale("ar")}
-            >
-              AR
-            </DropdownMenuItem>
-          </DropdownMenuContent>
-        </DropdownMenu>
+        <LocaleSwitcher />
       </div>
     </nav>
   );

@@ -6,7 +6,7 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card";
+} from "@/src/components/ui/card";
 
 import figma from "../../public/tech-icons/figma.svg";
 import chatgpt from "../../public/tech-icons/chatgpt.svg";
@@ -26,7 +26,7 @@ import insta from "../../public/insta.svg";
 import linkedin from "../../public/linkedin.svg";
 import whatsapp from "../../public/whatsapp.png";
 
-import { Button } from "@/components/ui/button";
+import { Button } from "@/src/components/ui/button";
 import { useTranslations } from "next-intl";
 const icons = [
   html,

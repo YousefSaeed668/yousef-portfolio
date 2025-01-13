@@ -1,11 +1,9 @@
-"use client";
-
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 import Link from "next/link";
 
-export function Footer() {
-  const t = useTranslations("Index");
-
+export async function Footer() {
+  const t = await getTranslations("Index");
+  const year = new Date().getFullYear();
   return (
     <footer className="my-12">
       <ul className="flex flex-wrap justify-center">
@@ -22,7 +20,7 @@ export function Footer() {
       </ul>
 
       <p className="mt-2 text-center  text-muted-foreground">
-        &copy; 2024 Yousef Saeed. All Rights reserved.
+        &copy; {year} Yousef Saeed. All Rights reserved.
       </p>
     </footer>
   );

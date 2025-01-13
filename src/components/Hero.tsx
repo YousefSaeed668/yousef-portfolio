@@ -1,9 +1,9 @@
 import Image from "next/image";
 import yousef from "../../public/yousef.jpg";
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 
-export function Hero() {
-  const t = useTranslations("Index");
+export async function Hero() {
+  const t = await getTranslations("Index");
   return (
     <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
       <div className="col-span-1 flex flex-col justify-center lg:col-span-2 h-full bg-gray-100 min-h-[500px] lg:min-h-[300px] rounded-2xl p-8">

@@ -1,5 +1,5 @@
 "use client";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/src/components/ui/button";
 import { Eye, Github } from "lucide-react";
 import { useTranslations } from "next-intl";
 
