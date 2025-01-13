@@ -4,6 +4,7 @@ import { ProjectsCard } from "@/lib/interface";
 import { client } from "@/lib/sanity";
 import Link from "next/link";
 import { ProjectDialog } from "./ProjectDialog";
+import { getLocale } from "next-intl/server";
 async function getData(locale: string) {
   const query = `*[_type == "${locale}"] | order(_createdAt desc) [0...2] {
         title,
@@ -20,7 +21,8 @@ async function getData(locale: string) {
 
   return data;
 }
-export async function FavoriteProjects({ locale }: { locale: string }) {
+export async function FavoriteProjects() {
+  const locale = await getLocale();
   const data: ProjectsCard[] = await getData(locale);
   return (
     <div>
