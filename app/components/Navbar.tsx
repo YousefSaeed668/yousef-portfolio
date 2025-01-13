@@ -32,7 +32,7 @@ export function Navbar() {
     router.replace(newPath);
     setTimeout(() => {
       window.location.reload();
-    }, 300);
+    }, 700);
   };
 
   return (
