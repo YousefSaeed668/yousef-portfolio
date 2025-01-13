@@ -34,7 +34,7 @@ export function Hero() {
             ></span>
           </a>
           <a
-            href="https://drive.usercontent.google.com/u/0/uc?id=1kUfIglR_8jeXvGi5irIX-gIt0zp6_BOg&export=download"
+            href="https://download1325.mediafire.com/ey71vaj9bcugYyWOlCkolBmpBJ-stKR8g7j31gt8PWZOk6orxTb1-2tX5VMu-3DQRBzpq7n9P3STvRaea-wSgxP5jGrPqAS5OQck4cuHz6g6cVKdeVY0ECExaVuht15bOVfywpBvsmP9XxkU3FnW90cScBWh0nd0wkiOjMJZ7g/r16e7n95hxx64sh/YousefCV.pdf"
             className="relative w-fit inline-flex items-center justify-start px-6 py-3 overflow-hidden font-medium transition-all bg-primary/80 rounded-xl group"
           >
             <span className="absolute top-0 right-0 inline-block w-4 h-4 transition-all duration-500 ease-in-out bg-primary rounded group-hover:-mr-4 group-hover:-mt-4">
