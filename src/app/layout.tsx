@@ -13,6 +13,19 @@ export const metadata: Metadata = {
   title: "Yousef Saeed Portfolio",
   description:
     "Discover the portfolio of Yousef Saeed, a skilled web developer specializing in modern web technologies like React, Next.js, and Tailwind CSS. Explore his projects, skills, and professional journey.",
+  openGraph: {
+    title: "Yousef Saeed Portfolio",
+    description:
+      "Discover the portfolio of Yousef Saeed, a skilled web developer specializing in modern web technologies like React, Next.js, and Tailwind CSS. Explore his projects, skills, and professional journey.",
+    images: [
+      {
+        url: "/opengraph.jpeg",
+        width: 1280,
+        height: 720,
+        alt: "Portfolio Open Graph Image",
+      },
+    ],
+  },
 };
 
 export default async function RootLayout({
