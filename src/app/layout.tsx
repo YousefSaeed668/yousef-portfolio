@@ -11,6 +11,9 @@ const readexpro = Readex_Pro({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Yousef Saeed Portfolio",
+  verification: {
+    google: "LIA6kfoVjBnJ38tasY6ZNi9ingMGRdSnFTS0C3dWkdI",
+  },
   description:
     "Discover the portfolio of Yousef Saeed, a skilled web developer specializing in modern web technologies like React, Next.js, and Tailwind CSS. Explore his projects, skills, and professional journey.",
   openGraph: {
