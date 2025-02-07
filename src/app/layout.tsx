@@ -6,7 +6,6 @@ import { getLocale, getMessages } from "next-intl/server";
 import { NextIntlClientProvider } from "next-intl";
 import { Navbar } from "../components/Navbar";
 import { Footer } from "../components/Footer";
-import { Analytics } from "@vercel/analytics/react";
 const readexpro = Readex_Pro({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -46,7 +45,6 @@ export default async function RootLayout({
           {children}
           <Footer />
         </NextIntlClientProvider>
-        <Analytics />
       </body>
     </html>
   );
